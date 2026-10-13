@@ -15,6 +15,11 @@ const books = [
   "Casas Estranhas 2: O mistério das onze plantas baixas",
   "Frankenstein",
   "Carmilla"
-];
+].map((book) => (
+  {
+    id: crypto.randomUUID(),
+    name: book
+  }
+));
 
 export default books;

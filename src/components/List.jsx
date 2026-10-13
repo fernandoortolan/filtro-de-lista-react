@@ -1,7 +1,7 @@
 function List({ list }) {
   const listItems = list.map((item) => (
-    <li key={item}>
-      {item}
+    <li key={item.id}>
+      {item.name}
     </li>
   ));
 

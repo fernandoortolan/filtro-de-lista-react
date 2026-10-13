@@ -6,10 +6,9 @@ import books from "./data/books";
 import { useState } from "react";
 
 function App() {
-
   const [search, setSearch] = useState("");
   const filteredBooks = books.filter((book) =>
-    book.toLowerCase().includes(search.toLocaleLowerCase())
+    book.name.toLowerCase().includes(search.toLocaleLowerCase())
   );
 
   return (
