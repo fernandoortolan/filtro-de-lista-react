@@ -41,6 +41,11 @@ function App() {
           setSearch={setSearch}
         />
         <List list={filteredBooks} />
+        {
+          filteredBooks.length === 0 && (
+            <p>Nenhum livro encontrado.</p>
+          )
+        }
       </main>
     </>
   );
