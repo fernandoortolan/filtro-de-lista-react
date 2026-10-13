@@ -1,7 +1,11 @@
+import MainTitle from "./components/MainTitle";
+
 function App() {
   return (
     <>
-      <h1>Filtro de lista</h1>
+      <header>
+        <MainTitle content="Filtro de lista" />
+      </header>
     </>
   );
 }
