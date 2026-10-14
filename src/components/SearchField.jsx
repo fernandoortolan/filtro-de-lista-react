@@ -1,11 +1,11 @@
-function FilterField({
+function SearchField({
   id,
   labelContent,
   search,
   setSearch
 }) {
   return (
-    <form className="filter-field">
+    <form className="search-field">
       <label for={id}>{labelContent}</label>
       <input
         type="text"
@@ -18,4 +18,4 @@ function FilterField({
   );
 }
 
-export default FilterField;
+export default SearchField;

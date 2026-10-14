@@ -1,4 +1,4 @@
-import FilterField from "./components/FilterField";
+import SearchField from "./components/SearchField";
 import MainTitle from "./components/MainTitle";
 import List from "./components/List";
 import Paragraph from "./components/Paragraph";
@@ -36,7 +36,7 @@ function App() {
         </div>
       </header>
       <main>
-        <FilterField
+        <SearchField
           id={"book-search"}
           labelContent={"Filtrar livro: "}
           search={search}
