@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 64rem;
+  min-width: 20rem;
+
+  margin: 0 auto;
+  font-family: "Lora", serif;
+  background-color: #141615;
+  color: #f0eee5;
+}
