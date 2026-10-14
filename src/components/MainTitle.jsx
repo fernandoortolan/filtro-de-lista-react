@@ -1,7 +1,7 @@
-function MainTitle({ content }) {
+function MainTitle({ className, content }) {
   return (
-    <h1>{content}</h1>
-  )
+    <h1 className={className}>{content}</h1>
+  );
 }
 
 export default MainTitle;
