@@ -15,7 +15,7 @@ function FilterField({
         onChange={(event) => setSearch(event.target.value)}
       />
     </form>
-  )
+  );
 }
 
 export default FilterField;
