@@ -1,7 +1,12 @@
-import MainTitle from "./components/MainTitle";
 import FilterField from "./components/FilterField";
+import MainTitle from "./components/MainTitle";
 import List from "./components/List";
+import Paragraph from "./components/Paragraph";
+
 import books from "./data/books";
+
+import './App.css';
+
 
 import { useState } from "react";
 
@@ -13,8 +18,22 @@ function App() {
 
   return (
     <>
-      <header>
-        <MainTitle content={"Filtro de lista"} />
+      <header className="hero">
+        <div className="hero__content">
+          <MainTitle
+            className={"hero__title"}
+            content={"Encontre sua próxima leitura."}
+          />
+          <Paragraph
+            className={"hero__subtitle"}
+            content={"Para cada momento, um livro."}
+          />
+          <Paragraph
+            className={"hero__description"}
+            content={"Histórias que ficam. Autores que acompanham. \
+              Explore o seu próximo encontro."}
+          />
+        </div>
       </header>
       <main>
         <FilterField
