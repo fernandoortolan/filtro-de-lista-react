@@ -2,6 +2,7 @@ import SearchField from "./components/SearchField";
 import MainTitle from "./components/MainTitle";
 import List from "./components/List";
 import Paragraph from "./components/Paragraph";
+import Summary from "./components/Summary";
 
 import books from "./data/books";
 
@@ -44,12 +45,13 @@ function App() {
             setSearch={setSearch}
           />
         </div>
-        <List list={filteredBooks} />
-        {
-          filteredBooks.length === 0 && (
-            <p>Nenhum livro encontrado.</p>
-          )
-        }
+        <div className="search-result__content">
+          <Summary
+            content={"Resultados da busca"}
+            result={search === "" ? "" : filteredBooks.length}
+          />
+          <List list={filteredBooks} />
+        </div>
       </main>
     </>
   );
