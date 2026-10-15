@@ -36,12 +36,14 @@ function App() {
         </div>
       </header>
       <main>
-        <SearchField
-          id={"book-search"}
-          labelContent={"Filtrar livro: "}
-          search={search}
-          setSearch={setSearch}
-        />
+        <div className="search-field__content">
+          <SearchField
+            id={"book-search"}
+            labelContent={"Busque por título ou palavra-chave"}
+            search={search}
+            setSearch={setSearch}
+          />
+        </div>
         <List list={filteredBooks} />
         {
           filteredBooks.length === 0 && (
