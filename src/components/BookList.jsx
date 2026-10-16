@@ -63,7 +63,7 @@ function List({ list }) {
             </span>
             <span className="book__separator">*</span>
             <span className="book__page-count">
-              {item.page_count ?? 'N.º de páginas não cadastrado'}
+              {item.pages ?? 'N.º de páginas não cadastrado'}
             </span>
           </span>
         </div>
