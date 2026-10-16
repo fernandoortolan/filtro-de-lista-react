@@ -1,6 +1,6 @@
 import SearchField from "./components/SearchField";
 import MainTitle from "./components/MainTitle";
-import List from "./components/List";
+import BookList from "./components/BookList";
 import Paragraph from "./components/Paragraph";
 import Summary from "./components/Summary";
 
@@ -14,7 +14,7 @@ import { useState } from "react";
 function App() {
   const [search, setSearch] = useState("");
   const filteredBooks = books.filter((book) =>
-    book.name.toLowerCase().includes(search.toLocaleLowerCase())
+    book.title.toLowerCase().includes(search.toLocaleLowerCase())
   );
 
   return (
@@ -50,7 +50,7 @@ function App() {
             content={"Resultados da busca"}
             result={search === "" ? "" : filteredBooks.length}
           />
-          <List list={filteredBooks} />
+          <BookList list={filteredBooks} />
         </div>
       </main>
     </>
