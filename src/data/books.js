@@ -15,11 +15,27 @@ const books = [
   "Casas Estranhas 2: O mistério das onze plantas baixas",
   "Frankenstein",
   "Carmilla"
-].map((book) => (
-  {
-    id: crypto.randomUUID(),
-    name: book
+].map(function(book) {
+  const uuid = crypto.randomUUID();
+
+  let displayBookTitle = (book.slice(0, 20)).trim();
+
+  if (displayBookTitle.length > 17) {
+    displayBookTitle = displayBookTitle.slice(0, 17).trim() + '...';
   }
-));
+
+  let displayBookAuthor = 'Author';
+  const coverColor = Math.floor(Math.random() * 4);
+  const coverIllustration = Math.floor(Math.random() * 4);
+
+  return {
+    id: uuid,
+    title: book,
+    display_title: displayBookTitle,
+    display_author: displayBookAuthor,
+    cover_color: coverColor,
+    cover_illustration: coverIllustration,
+  }
+});
 
 export default books;
