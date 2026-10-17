@@ -23,14 +23,35 @@ function List({ list }) {
   const listItems = list.map((item) => (
     <li className="book" key={item.id}>
       <div className="book__c-i">
-        <div className={`book__cover ${coverColors[item.cover_color]}`}>
-          <img className="book__spine" src={BookSpine} alt="" />
-          <img className="book__publisher-imprint" src={PublisherImprint} alt="" />
-          <img className="book__cover-illustration" src={coverIllustrations[item.cover_illustration]} alt="" />
-          <span className="book__display-author" lang="pt">
+        <div
+          className={`book__cover ${coverColors[item.cover_color]}`}
+          aria-hidden="true"
+        >
+          <img
+            className="book__spine"
+            src={BookSpine}
+            alt=""
+          />
+          <img
+            className="book__publisher-imprint"
+            src={PublisherImprint}
+            alt=""
+          />
+          <img
+            className="book__cover-illustration"
+            src={coverIllustrations[item.cover_illustration]}
+            alt=""
+          />
+          <span
+            className="book__display-author"
+            lang="pt"
+          >
             {item.display_author}
           </span>
-          <span className="book__display-title" lang="pt">
+          <span
+            className="book__display-title"
+            lang="pt"
+          >
             {item.display_title}
           </span>
         </div>
