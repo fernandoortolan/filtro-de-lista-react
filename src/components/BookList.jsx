@@ -42,18 +42,20 @@ function List({ list }) {
             src={coverIllustrations[item.cover_illustration]}
             alt=""
           />
-          <span
-            className="book__display-author"
-            lang="pt"
-          >
-            {item.display_author}
-          </span>
-          <span
-            className="book__display-title"
-            lang="pt"
-          >
-            {item.display_title}
-          </span>
+          <div className="book__display-author-and-title">
+            <span
+              className="book__display-author"
+              lang="pt"
+            >
+              {item.display_author}
+            </span>
+            <span
+              className="book__display-title"
+              lang="pt"
+            >
+              {item.display_title}
+            </span>
+          </div>
         </div>
         <div className="book__information">
           <span className="book__title">

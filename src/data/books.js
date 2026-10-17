@@ -131,17 +131,21 @@ const books = bookData.map(function(book) {
     pages
   ] = book;
 
-  const displayTitle = title.slice(0, 17).trim();
+  const displayTitle = title.slice(0, 15).trim();
+  const displayAuthor = author.slice(0, 15).trim();
 
   return {
     id: crypto.randomUUID(),
     title,
     display_title:
-      title.length > 20
+      title.length > 18
         ? displayTitle + "..."
         : title,
     author,
-    display_author: author,
+    display_author:
+      author.lenght > 18
+        ? displayAuthor + "..."
+        : author,
     publication_year,
     synopsis,
     genre,
