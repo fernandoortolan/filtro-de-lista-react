@@ -240,6 +240,30 @@ main {
   background-color: #d8cfad;
 }
 
+.book__cover-color--five {
+  background-color: #b5a0b8;
+}
+
+.book__cover-color--six {
+  background-color: #d6a5a0;
+}
+
+.book__cover-color--seven {
+  background-color: #a9bacb;
+}
+
+.book__cover-color--eight {
+  background-color: #c3b49a;
+}
+
+.book__cover-color--nine {
+  background-color: #b4c5a8;
+}
+
+.book__cover-color--ten {
+  background-color: #dfc3a1;
+}
+
 .book__cover .book__spine {
   position: absolute;
   left: 2px;

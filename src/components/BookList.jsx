@@ -17,6 +17,12 @@ const coverColors = {
   1: "book__cover-color--two",
   2: "book__cover-color--three",
   3: "book__cover-color--four",
+  4: "book__cover-color--five",
+  5: "book__cover-color--six",
+  6: "book__cover-color--seven",
+  7: "book__cover-color--eight",
+  8: "book__cover-color--nine",
+  9: "book__cover-color--ten",
 };
 
 function List({ list }) {
