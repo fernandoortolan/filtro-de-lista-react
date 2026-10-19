@@ -193,6 +193,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 
   font-family: var(--font-family-sans-serif);
 
@@ -293,7 +294,7 @@ main {
 
 .book__cover .book__display-author,
 .book__cover .book__display-title {
-  width: 90%;
+  width: 52px;
 
   font-weight: 600;  /* Semi Bold */
   text-transform: uppercase;
@@ -319,6 +320,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  max-width: 42rem;
+  min-width: 21rem;
+  width: 100%;
 }
 
 .book__title {
@@ -380,4 +385,49 @@ main {
 
   font-size: 0.625rem;
   color: #818a7e;
+}
+
+.book__bookmark {
+  height: 2.25rem;
+  width: 2.25rem;
+
+  border: 1px solid #333932;
+  border-radius: 4px;
+}
+
+.book__bookmark-label,
+.book__external-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  transform: scale(1);
+
+  cursor: pointer;
+}
+
+.book__bookmark-label:active {
+  transform: scale(0.95);
+}
+
+.book__bookmark-checkbox {
+  display: none;
+}
+
+.book__bookmark-icon,
+.book__external-link-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.book__external-link-container {
+  height: 2.25rem;
+  width: 2.25rem;
 }
