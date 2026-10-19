@@ -4,6 +4,9 @@ import CoverIllustrationRibbons from '../assets/book/ilustracao-da-capa-lacos.sv
 import CoverIllustrationWaves from '../assets/book/ilustracao-da-capa-ondas.svg';
 import BookSpine from '../assets/book/lombada.svg';
 import PublisherImprint from '../assets/book/selo-editorial.svg';
+import Bookmark from '../assets/icons/bookmark.svg';
+import BookmarkChecked from '../assets/icons/bookmark-checked.svg';
+import ArrowUpRight from '../assets/icons/arrow-up-right.svg';
 
 const coverIllustrations = {
   0: CoverIllustrationStar,
@@ -25,9 +28,12 @@ const coverColors = {
   9: "book__cover-color--ten",
 };
 
-function List({ list }) {
+function List({ list, changeBookmarkStatus }) {
   const listItems = list.map((item) => (
-    <li className="book" key={item.id}>
+    <li
+      className="book"
+      key={item.id}
+    >
       <div className="book__c-i">
         <div
           className={`book__cover ${coverColors[item.cover_color]}`}
@@ -51,13 +57,11 @@ function List({ list }) {
           <div className="book__display-author-and-title">
             <span
               className="book__display-author"
-              lang="pt"
             >
               {item.display_author}
             </span>
             <span
               className="book__display-title"
-              lang="pt"
             >
               {item.display_title}
             </span>
@@ -97,10 +101,37 @@ function List({ list }) {
           </span>
         </div>
         <div className="book__bookmark">
-          <span className="book__bookmark-icon">Icon</span>
+          <label
+            htmlFor={`bookmark-${item.id}`}
+            className="book__bookmark-label"
+          >
+            <input
+              type="checkbox"
+              className="book__bookmark-checkbox"
+              id={`bookmark-${item.id}`}
+              checked={item.bookmarked}
+              onChange={() => changeBookmarkStatus(item.id)}
+            />
+            {
+              item.bookmarked && (
+                <img src={BookmarkChecked} alt="" className="book__bookmark-icon" />
+              )
+            }
+            {
+              !item.bookmarked && (
+                <img src={Bookmark} alt="" className="book__bookmark-icon" />
+              )
+            }
+          </label>
         </div>
-        <div className="book__external-link">
-          <span>Icon</span>
+        <div className="book__external-link-container">
+          <a href="#" className="book__external-link">
+            <img
+              src={ArrowUpRight}
+              alt=""
+              className="book__external-link-icon"
+            />
+          </a>
         </div>
       </div>
     </li>

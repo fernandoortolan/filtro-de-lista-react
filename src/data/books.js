@@ -152,7 +152,8 @@ const books = bookData.map(function(book) {
     format,
     pages,
     cover_color: Math.floor(Math.random() * 10),
-    cover_illustration: Math.floor(Math.random() * 4)
+    cover_illustration: Math.floor(Math.random() * 4),
+    bookmarked: false,
   };
 });
 

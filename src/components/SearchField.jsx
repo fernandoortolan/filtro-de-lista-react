@@ -16,7 +16,7 @@ function SearchField({
         <img
           className="magnifying-glass-icon"
           src={MagnifyingGlass}
-          alt="Search icon"
+          alt="Ícone de busca"
         />
         <input
           type="text"
