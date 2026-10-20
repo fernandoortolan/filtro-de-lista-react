@@ -3,6 +3,7 @@ import MainTitle from "./components/MainTitle";
 import BookList from "./components/BookList";
 import Paragraph from "./components/Paragraph";
 import Summary from "./components/Summary";
+import ResultBulletin from "./components/ResultBulletin";
 
 import booksDate from "./data/books";
 
@@ -70,6 +71,7 @@ function App() {
             list={filteredBooks}
             changeBookmarkStatus={changeBookmarkStatus}
           />
+          <ResultBulletin result={search} />
         </div>
       </main>
     </>
