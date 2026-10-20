@@ -34,7 +34,7 @@ function List({ list, changeBookmarkStatus }) {
       className="book"
       key={item.id}
     >
-      <div className="book__c-i">
+      <div className="book__details">
         <div
           className={`book__cover ${coverColors[item.cover_color]}`}
           aria-hidden="true"
@@ -85,7 +85,7 @@ function List({ list, changeBookmarkStatus }) {
           </span>
         </div>
       </div>
-      <div className="book__ed-b-el">
+      <div className="book__metadata">
         <div className="book__edition-details">
           <span className="book__genre">
             {item.genre ?? 'Gênero não cadastrado'}

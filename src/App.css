@@ -189,10 +189,9 @@ main {
 .book {
   height: 8rem;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 14rem;
   gap: 1rem;
 
   font-family: var(--font-family-sans-serif);
@@ -203,12 +202,11 @@ main {
   border-radius: 0.25rem;
 }
 
-.book__c-i {
+.book__details {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  flex: 0 0 75%;
 
   /* border: 1px solid skyblue; */
 }
@@ -358,13 +356,11 @@ main {
   color: #b0b5aa;
 }
 
-.book__ed-b-el {
+.book__metadata {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  flex: 0 0 20%;
 }
 
 .book__edition-details {
@@ -392,7 +388,6 @@ main {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  flex: 0 0 5%;
 }
 
 .book__bookmark {
