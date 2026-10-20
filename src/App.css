@@ -434,3 +434,14 @@ main {
   height: 2.25rem;
   width: 2.25rem;
 }
+
+/* RESULT BULLETIN */
+
+.result-bulletin {
+  text-align: center;
+  font-family: var(--font-family-sans-serif);
+  font-size: 0.75rem;
+  color: #818a7e;
+
+  margin-block: 1rem;
+}
