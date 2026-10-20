@@ -100,38 +100,40 @@ function List({ list, changeBookmarkStatus }) {
             </span>
           </span>
         </div>
-        <div className="book__bookmark">
-          <label
-            htmlFor={`bookmark-${item.id}`}
-            className="book__bookmark-label"
-          >
-            <input
-              type="checkbox"
-              className="book__bookmark-checkbox"
-              id={`bookmark-${item.id}`}
-              checked={item.bookmarked}
-              onChange={() => changeBookmarkStatus(item.id)}
-            />
-            {
-              item.bookmarked && (
-                <img src={BookmarkChecked} alt="" className="book__bookmark-icon" />
-              )
-            }
-            {
-              !item.bookmarked && (
-                <img src={Bookmark} alt="" className="book__bookmark-icon" />
-              )
-            }
-          </label>
-        </div>
-        <div className="book__external-link-container">
-          <a href="#" className="book__external-link">
-            <img
-              src={ArrowUpRight}
-              alt=""
-              className="book__external-link-icon"
-            />
-          </a>
+        <div className="book__bookmark-and-external-link">
+          <div className="book__bookmark">
+            <label
+              htmlFor={`bookmark-${item.id}`}
+              className="book__bookmark-label"
+            >
+              <input
+                type="checkbox"
+                className="book__bookmark-checkbox"
+                id={`bookmark-${item.id}`}
+                checked={item.bookmarked}
+                onChange={() => changeBookmarkStatus(item.id)}
+              />
+              {
+                item.bookmarked && (
+                  <img src={BookmarkChecked} alt="" className="book__bookmark-icon" />
+                )
+              }
+              {
+                !item.bookmarked && (
+                  <img src={Bookmark} alt="" className="book__bookmark-icon" />
+                )
+              }
+            </label>
+          </div>
+          <div className="book__external-link-container">
+            <a href="#" className="book__external-link">
+              <img
+                src={ArrowUpRight}
+                alt=""
+                className="book__external-link-icon"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </li>
