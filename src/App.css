@@ -2,6 +2,12 @@
   /* Typography */
   --font-family-serif: "Lora", serif;
   --font-family-sans-serif: "Inter", sans-serif;
+
+  --color-link: #b0b5aa;
+  --color-link-hover: #d0d4cb;
+  --color-link-active: #8f9788;
+  --color-link-visited: #c1c8ba;
+  --color-link-disabled: #6f766b;
 }
 
 
@@ -53,7 +59,7 @@
 /* MAIN SECTION */
 
 main {
-  padding: 0.625rem 1.25rem 1.25rem;
+  padding: 0.625rem 1.25rem 5rem;
 }
 
 /* SEARCH FIELD */
@@ -144,6 +150,7 @@ main {
   gap: 1rem;
 
   padding-bottom: 0.875rem;
+  margin-bottom: 1rem;
 
   border-bottom: 1px solid #333932;
 }
@@ -180,10 +187,6 @@ main {
 
   padding: 0;
   margin: 0;
-}
-
-.book-list li:first-of-type {
-  margin-top: 1rem;
 }
 
 .book {
@@ -438,10 +441,124 @@ main {
 /* RESULT BULLETIN */
 
 .result-bulletin {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+
   font-family: var(--font-family-sans-serif);
   font-size: 0.75rem;
   color: #818a7e;
 
-  margin-block: 1rem;
+  margin-block: 1rem 2.5rem;
+}
+
+.result-bulletin p {
+  margin: 0;
+}
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #141615;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 2rem 1.25rem;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 70rem;
+  min-width: 20rem;
+  margin: 0 auto;
+}
+
+.footer__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  border-top: 1px solid #333932;
+
+}
+
+.footer__manifest {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__moon-icon {
+  height: 0.625rem;
+}
+
+.footer__manifest-text {
+  font-family: var(--font-family-sans-serif);
+  font-size: 0.75rem;
+  color: #818a7e;
+
+  margin: 0;
+}
+
+.footer__institutional-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer__institutional-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer__about-link,
+.footer__help-link {
+  font-family: var(--font-family-sans-serif);
+  font-size: 0.75rem;
+  text-decoration: none;
+
+  transition: color 0.1s ease;
+}
+
+.footer__about-link:link,
+.footer__help-link:link {
+  color: var(--color-link);
+}
+
+.footer__about-link:hover,
+.footer__help-link:hover {
+  color: var(--color-link-hover);
+}
+
+.footer__about-link:active,
+.footer__help-link:active {
+  color: var(--color-link-active);
+}
+
+.footer__about-link:visited,
+.footer__help-link:visited {
+  color: var(--color-link-visited);
+}
+
+.footer__about-link:disabled,
+.footer__help-link:disabled {
+  color: var(--color-link-disabled);
+}
+
+/* SCROLL */
+
+.scroll {
+  max-height: 100rem;
+  height: 100%;
+
+  overflow-y: scroll;
+  overflow-y: auto;
 }

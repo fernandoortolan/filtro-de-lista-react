@@ -4,8 +4,11 @@ import BookList from "./components/BookList";
 import Paragraph from "./components/Paragraph";
 import Summary from "./components/Summary";
 import ResultBulletin from "./components/ResultBulletin";
+import Link from "./components/Link";
 
 import booksDate from "./data/books";
+
+import Moon from "./assets/icons/moon.svg";
 
 import './App.css';
 
@@ -71,9 +74,36 @@ function App() {
             list={filteredBooks}
             changeBookmarkStatus={changeBookmarkStatus}
           />
-          <ResultBulletin result={search} />
         </div>
+        <ResultBulletin result={search} />
       </main>
+      <footer className="footer">
+        <div className="footer__content">
+          <div className="footer__manifest">
+            <img
+              className="footer__moon-icon"
+              src={Moon}
+              alt="Ícone de lua"
+            />
+            <Paragraph
+              className={"footer__manifest-text"}
+              content={"Um lugar para se perder e se encontrar."}
+            />
+          </div>
+          <div className="footer__institutional-links">
+            <Link
+              className={"footer__about-link"}
+              href={"#"}
+              content={"Sobre a biblioteca"}
+            />
+            <Link
+              className={"footer__help-link"}
+              href={"#"}
+              content={"Ajuda"}
+            />
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

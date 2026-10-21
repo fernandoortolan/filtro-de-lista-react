@@ -28,7 +28,7 @@ const coverColors = {
   9: "book__cover-color--ten",
 };
 
-function List({ list, changeBookmarkStatus }) {
+function BookList({ list, changeBookmarkStatus }) {
   const listItems = list.map((item) => (
     <li
       className="book"
@@ -140,10 +140,10 @@ function List({ list, changeBookmarkStatus }) {
   ));
 
   return (
-    <ul className="book-list">
+    <ul className="book-list scroll">
       {listItems}
     </ul>
   );
 }
 
-export default List;
+export default BookList;

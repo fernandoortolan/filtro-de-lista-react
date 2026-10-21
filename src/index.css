@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+
+  scrollbar-color: #41473F #141615;
 }
 
 body {
@@ -11,4 +13,6 @@ body {
   font-family: "Lora", serif;
   background-color: #141615;
   color: #f0eee5;
+
+  overflow: scroll;
 }
