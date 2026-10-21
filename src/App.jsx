@@ -19,7 +19,8 @@ function App() {
   const [books, setBooks] = useState(booksDate);
   const [search, setSearch] = useState("");
   const filteredBooks = books.filter((book) =>
-    book.title.toLowerCase().includes(search.toLocaleLowerCase())
+    book.title.toLowerCase().includes(search.toLowerCase()) ||
+    book.author.toLowerCase().includes(search.toLowerCase())
   );
 
   function changeBookmarkStatus(id) {
