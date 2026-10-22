@@ -63,7 +63,7 @@ function App() {
         <div className="search-field__content">
           <SearchField
             id={"book-search"}
-            labelContent={"Busque por título ou palavra-chave"}
+            labelContent={"Busque por título, autor ou palavra-chave"}
             search={search}
             setSearch={setSearch}
           />
@@ -90,7 +90,7 @@ function App() {
             />
             <Paragraph
               className={"footer__manifest-text"}
-              content={"Um lugar para se perder e se encontrar."}
+              content={"Entrelinhas. Um lugar para se perder e se encontrar."}
             />
           </div>
           <div className="footer__institutional-links">
