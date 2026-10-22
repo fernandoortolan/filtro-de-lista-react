@@ -5,6 +5,7 @@ import Paragraph from "./components/Paragraph";
 import Summary from "./components/Summary";
 import ResultBulletin from "./components/ResultBulletin";
 import Link from "./components/Link";
+import Navbar from "./components/Navbar";
 
 import booksDate from "./data/books";
 
@@ -41,6 +42,7 @@ function App() {
   return (
     <>
       <header className="hero">
+        <Navbar />
         <div className="hero__content">
           <MainTitle
             className={"hero__title"}

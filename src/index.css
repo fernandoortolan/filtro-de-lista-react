@@ -1,3 +1,15 @@
+:root {
+  /* Typography */
+  --font-family-serif: "Lora", serif;
+  --font-family-sans-serif: "Inter", sans-serif;
+
+  --color-link: #b0b5aa;
+  --color-link-hover: #d0d4cb;
+  --color-link-active: #8f9788;
+  --color-link-visited: #c1c8ba;
+  --color-link-disabled: #6f766b;
+}
+
 * {
   box-sizing: border-box;
 
