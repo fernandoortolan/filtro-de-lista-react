@@ -8,6 +8,8 @@ import Bookmark from '../assets/icons/bookmark.svg';
 import BookmarkChecked from '../assets/icons/bookmark-checked.svg';
 import ArrowUpRight from '../assets/icons/arrow-up-right.svg';
 
+import { useState } from 'react';
+
 const coverIllustrations = {
   0: CoverIllustrationStar,
   1: CoverIllustrationFoliage,
@@ -29,6 +31,8 @@ const coverColors = {
 };
 
 function BookList({ list, changeBookmarkStatus }) {
+  const [isSpacePressed, setIsSpacePressed] = useState(false);
+
   const listItems = list.map((item) => (
     <li
       className="book"
@@ -104,7 +108,7 @@ function BookList({ list, changeBookmarkStatus }) {
           <div className="book__bookmark">
             <label
               htmlFor={`bookmark-${item.id}`}
-              className="book__bookmark-label"
+              className={`book__bookmark-label ${isSpacePressed ? 'is-pressed' : ''}`}
             >
               <input
                 type="checkbox"
@@ -112,17 +116,25 @@ function BookList({ list, changeBookmarkStatus }) {
                 id={`bookmark-${item.id}`}
                 checked={item.bookmarked}
                 onChange={() => changeBookmarkStatus(item.id)}
+                onKeyDown={(event) => {
+                  if (event.code === 'Space') {
+                    setIsSpacePressed(true);
+                  }
+                }}
+                onKeyUp={(event) => {
+                  if (event.code === 'Space') {
+                    setIsSpacePressed(false);
+                  }
+                }}
               />
-              {
-                item.bookmarked && (
-                  <img src={BookmarkChecked} alt="" className="book__bookmark-icon" />
-                )
-              }
-              {
-                !item.bookmarked && (
-                  <img src={Bookmark} alt="" className="book__bookmark-icon" />
-                )
-              }
+              <img
+                src={item.bookmarked ? BookmarkChecked : Bookmark}
+                alt={
+                  item.bookmarked ?
+                    'Desmarcar livro como favorito' : 'Marcar livro como favorito'
+                }
+                className="book__bookmark-icon"
+              />
             </label>
           </div>
           <div className="book__external-link-container">
