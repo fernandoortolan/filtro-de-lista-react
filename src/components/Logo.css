@@ -36,3 +36,8 @@
   text-transform: uppercase;
   color: #818a7e;
 }
+
+.logo:focus {
+  outline: 2px solid #f0eee5bf;
+  outline-offset: 2px;
+}

@@ -147,6 +147,12 @@ main {
   color: var(--color-link-disabled);
 }
 
+.footer__about-link:focus,
+.footer__help-link:focus {
+  outline: 2px solid #f0eee5bf;
+  outline-offset: 2px;
+}
+
 /* SCROLL */
 
 .scroll {

@@ -279,3 +279,16 @@
   height: 2.25rem;
   width: 2.25rem;
 }
+
+.book__external-link:focus {
+  outline: 2px solid #f0eee5bf;
+  outline-offset: 2px;
+}
+
+/*
+@media (width <= 32rem) {
+  .book {
+    height: 16rem;
+  }
+}
+ */
