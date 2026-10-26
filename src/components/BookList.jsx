@@ -111,21 +111,24 @@ function BookList({ list, changeBookmarkStatus }) {
               {item.genre ?? 'Não cadastrado'}
             </dd>
           </div>
-          <span className="book__format-and-extension">
-            <div className="book__format">
-              <dt className="visually-hidden">Formato</dt>
-              <dd>
-                {item.format ?? 'Não cadastrado'}
-              </dd>
-            </div>
-            <span className="book__separator" aria-hidden="true">*</span>
-            <div className="book__page-count">
-              <dt className="visually-hidden">Número de páginas</dt>
-              <dd>
-                {item.pages ?? 'Não cadastrado'}
-              </dd>
-            </div>
-          </span>
+          <div className="book__format">
+            <dt className="visually-hidden">Formato</dt>
+            <dd>
+              {item.format ?? 'Não cadastrado'}
+            </dd>
+          </div>
+          <div className="book__page-count">
+            <dt className="visually-hidden">Número de páginas</dt>
+            <dd>
+              {
+                item.pages === 1
+                  ? `${item.pages} página`
+                  : item.pages > 1
+                    ? `${item.pages} páginas`
+                    : 'Não cadastrado'
+              }
+            </dd>
+          </div>
         </dl>
         <div className="book__bookmark-and-external-link">
           <div className="book__bookmark">

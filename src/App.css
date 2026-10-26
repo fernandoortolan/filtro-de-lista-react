@@ -366,22 +366,20 @@ main {
 .book__edition-details {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+
+  font-size: 0.625rem;
+  color: #818a7e;
 }
 
 .book__genre {
   font-size: 0.75rem;
   color: #b0b5aa;
+
+  margin-bottom: 0.5rem;
 }
 
-.book__format-and-extension {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.125rem;
-
-  font-size: 0.625rem;
-  color: #818a7e;
+.book__format {
+  margin-bottom: 0.25rem;
 }
 
 .book__bookmark-and-external-link {
