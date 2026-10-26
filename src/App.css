@@ -313,6 +313,16 @@ main {
   gap: 0.5rem;
 }
 
+.book__title,
+.book__author,
+.book__publication-year,
+.book__synopsis,
+.book__genre,
+.book__format,
+.book__page-count {
+  position: relative;
+}
+
 .book__title {
   font-family: var(--font-family-serif);
   font-size: 1.375rem;
@@ -559,7 +569,5 @@ main {
 .scroll {
   max-height: 67.5rem;
   height: 100%;
-
-  overflow-y: scroll;
   overflow-y: auto;
 }

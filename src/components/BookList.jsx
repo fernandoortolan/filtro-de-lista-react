@@ -71,39 +71,62 @@ function BookList({ list, changeBookmarkStatus }) {
             </span>
           </div>
         </div>
-        <div className="book__information">
-          <span className="book__title">
-            {item.title ?? 'Título não cadastrado'}
-          </span>
-          <div className="book__authorship-and-publication">
-            <span className="book__author">
-              {item.author ?? 'Autor não cadastrado'}
-            </span>
-            <span className="book__separator" aria-hidden="true">*</span>
-            <span className="book__publication-year">
-              {item.publication_year ?? 'Ano de publicação não cadastrado'}
-            </span>
+        <dl className="book__information">
+          <div className="book__title">
+            <dt className="visually-hidden">
+              Título
+            </dt>
+            <dd>
+              {item.title ?? 'Não cadastrado'}
+            </dd>
           </div>
-          <span className="book__synopsis">
-            {item.synopsis ?? 'Sinopse não cadastrada'}
-          </span>
-        </div>
+          <div className="book__authorship-and-publication">
+            <div className="book__author">
+              <dt className="visually-hidden">Autor</dt>
+              <dd>
+                {item.author ?? 'Não cadastrado'}
+              </dd>
+            </div>
+            <span className="book__separator" aria-hidden="true">*</span>
+            <div className="book__publication-year">
+              <dt className="visually-hidden">Ano de publicação</dt>
+              <dd>
+                {item.publication_year ?? 'Não cadastrado'}
+              </dd>
+            </div>
+          </div>
+          <div className="book__synopsis">
+            <dt className="visually-hidden">Sinopse</dt>
+            <dd>
+              {item.synopsis ?? 'Não cadastrada'}
+            </dd>
+          </div>
+        </dl>
       </div>
       <div className="book__metadata">
-        <div className="book__edition-details">
-          <span className="book__genre">
-            {item.genre ?? 'Gênero não cadastrado'}
-          </span>
+        <dl className="book__edition-details">
+          <div className="book__genre">
+            <dt className="visually-hidden">Gênero</dt>
+            <dd>
+              {item.genre ?? 'Não cadastrado'}
+            </dd>
+          </div>
           <span className="book__format-and-extension">
-            <span className="book__format">
-              {item.format ?? 'Formato não cadastrado'}
-            </span>
-            <span className="book__separator">*</span>
-            <span className="book__page-count">
-              {item.pages ?? 'N.º de páginas não cadastrado'}
-            </span>
+            <div className="book__format">
+              <dt className="visually-hidden">Formato</dt>
+              <dd>
+                {item.format ?? 'Não cadastrado'}
+              </dd>
+            </div>
+            <span className="book__separator" aria-hidden="true">*</span>
+            <div className="book__page-count">
+              <dt className="visually-hidden">Número de páginas</dt>
+              <dd>
+                {item.pages ?? 'Não cadastrado'}
+              </dd>
+            </div>
           </span>
-        </div>
+        </dl>
         <div className="book__bookmark-and-external-link">
           <div className="book__bookmark">
             <label
@@ -115,6 +138,11 @@ function BookList({ list, changeBookmarkStatus }) {
                 className="book__bookmark-checkbox"
                 id={`bookmark-${item.id}`}
                 checked={item.bookmarked}
+                aria-label={
+                  item.bookmarked
+                    ? `Remover ${item.title} dos favoritos`
+                    : `Adicionar ${item.title} aos favoritos`
+                }
                 onChange={() => changeBookmarkStatus(item.id)}
                 onKeyDown={(event) => {
                   if (event.code === 'Space') {
@@ -129,20 +157,23 @@ function BookList({ list, changeBookmarkStatus }) {
               />
               <img
                 src={item.bookmarked ? BookmarkChecked : Bookmark}
-                alt={
-                  item.bookmarked ?
-                    'Desmarcar livro como favorito' : 'Marcar livro como favorito'
-                }
+                alt=""
+                aria-hidden="true"
                 className="book__bookmark-icon"
               />
             </label>
           </div>
           <div className="book__external-link-container">
-            <a href="#" className="book__external-link">
+            <a
+              href="#"
+              className="book__external-link"
+              aria-label={`Ver página do livro ${item.title} (abre em nova aba)`}
+            >
               <img
                 src={ArrowUpRight}
-                alt=""
+                alt="Abrir página do livro"
                 className="book__external-link-icon"
+                aria-hidden="true"
               />
             </a>
           </div>
