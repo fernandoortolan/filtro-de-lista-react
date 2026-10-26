@@ -1,0 +1,36 @@
+/* SUMMARY */
+
+.summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  padding-bottom: 0.875rem;
+  margin-bottom: 1rem;
+
+  border-bottom: 1px solid #333932;
+}
+
+.summary .summary__content,
+.summary .summary__result {
+  margin: 0;
+
+  padding: 4px 0;
+
+  font-family: var(--font-family-sans-serif);
+}
+
+.summary .summary__content {
+  font-size: 0.875rem;
+}
+
+.summary .summary__result {
+  font-size: 0.625rem;
+  color: #d7b77c;
+
+  padding: 4px 8px;
+
+  background-color: #302c23;
+  border-radius: 4px;
+}

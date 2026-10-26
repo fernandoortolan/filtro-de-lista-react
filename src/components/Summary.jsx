@@ -1,3 +1,5 @@
+import './Summary.css';
+
 function Summary({ content, result }) {
   return (
     <div className="summary">

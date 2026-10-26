@@ -1,5 +1,7 @@
 import MagnifyingGlass from '../assets/icons/magnifying-glass.svg';
 
+import './SearchField.css';
+
 function SearchField({
   id,
   labelContent,

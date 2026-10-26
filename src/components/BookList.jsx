@@ -10,6 +10,8 @@ import ArrowUpRight from '../assets/icons/arrow-up-right.svg';
 
 import { useState } from 'react';
 
+import './BookList.css';
+
 const coverIllustrations = {
   0: CoverIllustrationStar,
   1: CoverIllustrationFoliage,

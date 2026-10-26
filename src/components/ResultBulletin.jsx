@@ -1,3 +1,5 @@
+import './ResultBulletin.css';
+
 function ResultBulletin({ result }) {
   return (
     <div className="result-bulletin">
